@@ -1,0 +1,7 @@
+todo_app:
+  hostname: localhost
+  port: 8080
+
+auth:
+  user: admin
+  pwd: admin
