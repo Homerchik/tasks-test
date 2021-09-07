@@ -1,3 +1,6 @@
+[![build status](https://github.com/Homerchik/tasks-test/actions/workflows/tests.yml/badge.svg)](https://github.com/Homerchik/tasks-test/actions/workflows/tests.yml)
+
+
 ## Descripion
 This is just simple repo, showing basic autotests to test simple todo application, provided as docker image, with API
 
