@@ -25,10 +25,11 @@ class TodoClient:
     def __make_req(self, method: str, api: str, params: Optional[Dict] = None,
                    payload: Optional[Dict] = None) -> Response:
         return self.session.request(url=f"http://{self.hostname}:{self.port}/{api}", method=method,
-                                    data=params, json=payload)
+                                    params=params, json=payload)
 
     def tasks(self, offset: int = None, limit: int = None) -> Response:
-        return self.__make_req("get", "todos", params=self.__add_query_string({"offset": offset, "limit": limit}))
+        params = self.__add_query_string({"offset": offset, "limit": limit})
+        return self.__make_req("get", "todos", params=params)
 
     def add_task(self, t: Task) -> Response:
         return self.__make_req("post", "todos", payload=t.__dict__)

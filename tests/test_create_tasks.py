@@ -42,5 +42,7 @@ def test_create_task_empty_text(task, todo_client: TodoClient, clear_tasks):
     assert t.text == ""
 
 
-def test_create_task_improper_values():
-    pass
+@pytest.mark.parametrize("task", [Task("x", "xyz", True), Task(0, 123, True), Task(0, "xyz", "1")])
+def test_create_task_improper_values(task, todo_client: TodoClient, clear_tasks):
+    r = todo_client.add_task(task)
+    assert r.status_code == 400

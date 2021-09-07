@@ -11,6 +11,6 @@ def tasks_generator(n: int) -> Iterator[Task]:
     return (Task(i, str(uuid4()), rand_bool()) for i in range(n))
 
 
-def get_tasks_from_app(todo_client: TodoClient) -> List[Task]:
-    r = todo_client.tasks()
+def get_tasks_from_app(todo_client: TodoClient, limit: int = None, offset: int = None) -> List[Task]:
+    r = todo_client.tasks(offset, limit)
     return [Task(**i) for i in r.json()]
