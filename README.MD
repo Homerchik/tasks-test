@@ -1,4 +1,4 @@
-[![build status](https://github.com/Homerchik/tasks-test/actions/workflows/tests.yml/badge.svg)](https://github.com/Homerchik/tasks-test/actions/workflows/tests.yml)
+[![tests](https://github.com/Homerchik/tasks-test/actions/workflows/python-app.yml/badge.svg)](https://github.com/Homerchik/tasks-test/actions/workflows/python-app.yml)
 
 
 ## Descripion
