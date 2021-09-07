@@ -1,1 +1,7 @@
 *.pytest_cache*
+*logs*
+*pycache*
+.idea
+ammo.txt
+comments.md
+configs/token.txt
