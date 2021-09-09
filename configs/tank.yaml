@@ -9,7 +9,7 @@ phantom:
   ammofile: /var/loadtest/ammo.txt
   load_profile:
     load_type: rps # schedule load by defining requests per second
-    schedule: step(250, 750, 100, 20) # starting from 1rps growing linearly to 10rps during 10 minutes
+    schedule: const(250, 10m) # starting from 1rps growing linearly to 10rps during 10 minutes
 console:
   enabled: true
 telegraf:
